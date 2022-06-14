@@ -5,30 +5,27 @@ import { Todo } from '../../models/Todo';
 @Component({
   selector: 'app-input',
   templateUrl: './input.component.html',
-  styleUrls: ['./input.component.scss']
+  styleUrls: ['./input.component.scss'],
 })
 export class InputComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   inputForm = new FormGroup({
     description: new FormControl(),
     status: new FormControl('Status'),
-  })
+  });
 
   @Output() inputDataEmitter = new EventEmitter<Todo>();
 
   onSubmit() {
     if (this.inputForm.valid) {
-      console.log(this.inputForm.value)
-      this.inputDataEmitter.emit(this.inputForm.value)
-      this.inputForm.reset()
+      console.log(this.inputForm.value);
+      this.inputDataEmitter.emit(this.inputForm.value);
+      this.inputForm.reset();
     } else {
-      alert('The input is invalid. Please, try again')
+      alert('The input is invalid. Please, try again');
     }
-
   }
 }

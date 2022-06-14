@@ -1,13 +1,19 @@
 <form [formGroup]="inputForm" (ngSubmit)="onSubmit()" class="form">
-    <mat-form-field appearance="fill" placeholder="Status">
-        <mat-label>Status</mat-label>
-        <select matNativeControl required formControlName="status">
-            <option value="todo">Todo</option>
-            <option value="doing">Doing</option>
-            <option value="done">Done</option>
-        </select>
-    </mat-form-field>
-    <input required id="description" type="text" formControlName="description" placeholder="Description"
-        class="description">
-    <button type="submit">ADD</button>
+  <mat-form-field appearance="fill" placeholder="Status">
+    <mat-label>Status</mat-label>
+    <select matNativeControl required formControlName="status">
+      <option value="todo">Todo</option>
+      <option value="doing">Doing</option>
+      <option value="done">Done</option>
+    </select>
+  </mat-form-field>
+  <input
+    required
+    id="description"
+    type="text"
+    formControlName="description"
+    placeholder="Description"
+    class="description"
+  />
+  <button type="submit">ADD</button>
 </form>

@@ -1,4 +1,4 @@
 export interface Todo {
-    description: string,
-    status: string
+  description: string;
+  status: string;
 }

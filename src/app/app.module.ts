@@ -12,11 +12,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MainPageComponent,
-    InputComponent
-  ],
+  declarations: [AppComponent, MainPageComponent, InputComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -27,6 +23,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatFormFieldModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
